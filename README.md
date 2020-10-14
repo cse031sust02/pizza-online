@@ -21,7 +21,7 @@ This repository contains
 - Customer orders pizza from neearby pizza stores
 - Store Managers manages orders for their pizza store from the Web Dashboard
 
-## User Module
+## Customer Module
 
 - customer registration/login
 - profile settings
@@ -30,7 +30,7 @@ This repository contains
 - place orders
 - order history
 
-## Admin Module 
+## Store Manager Module 
 
 - store manager registration/login
 - manage store information
