@@ -1,25 +1,25 @@
 
 # Overview 
 
-This is a very simple project to getting my hands on developing web applications using Django Framework
+This is a very simple project to get my hands on Django Framework
 
 
 # Pizza-Online :
 
-PizzaOnline is a On-Demand Pizza Delivery App. There are two components :
+Pizza Online is a On-Demand Pizza Delivery App. There are two components :
 
-1. A mobile app where customers can login and place orders
-2. A Web Dashboard for Store Managers where they can view and update the orders
+1. A Mobile App : where customers can login and place orders
+2. A Web Dashboard : where store managers can manage orders
  
 This repository contains 
-- The API backend for the mobile app
-- The Web Dashboard for Store Managers
+- The API Backend for the mobile app
+- The Web Dashboard for store managers
 
 ## Flow
 
 - Customers login to the Mobile App using their username and password
-- Customer browses pizza stores and pizzas and place orders
-- Store Managers manages orders for their store in the Web Dashboard
+- Customer orders pizza from neearby pizza stores
+- Store Managers manages orders for their pizza store from the Web Dashboard
 
 ## User Module
 
