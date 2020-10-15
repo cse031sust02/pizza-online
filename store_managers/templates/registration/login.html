@@ -1,0 +1,13 @@
+{% extends "store/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="POST" class="form-signin">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+    {{ form|crispy }}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+</form>
+Does not have an account? <a href="{% url 'manager-register' %}">Register</a>
+
+{% endblock content %}

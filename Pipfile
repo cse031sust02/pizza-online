@@ -11,6 +11,7 @@ autopep8 = "*"
 django = "==3.1.2"
 python-dotenv = "==0.14.0"
 psycopg2-binary = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.7"

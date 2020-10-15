@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third Party
+    'crispy_forms',
+
     # My Apps
-    'store.apps.StoreConfig'
+    'store.apps.StoreConfig',
+    'store_managers.apps.StoreManagersConfig'
 
 ]
 
@@ -127,3 +131,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Crispy Form
+# https://github.com/django-crispy-forms/django-crispy-forms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# Login Redirect
+# https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url
+
+LOGIN_REDIRECT_URL = '/store'
