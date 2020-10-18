@@ -1,80 +1,80 @@
 {% extends "store/base.html" %}
-
+{% load static %}
 {% block content %}
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Orders</h1>
+
+<div class="content-wrapper">
+
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                <i class="mdi mdi-shopping"></i>
+            </span> Orders </h3>
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order No</th>
+                                    <th>Customer</th>
+                                    <th>Phone</th>
+                                    <th>Ordered at</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>53275531</td>
+                                    <td>Jacob</td>
+                                    <td>01700000000</td>
+                                    <td>13 Octboer 2020</td>
+                                    <td><label class="badge badge-danger">Pending</label></td>
+                                </tr>
+                                <tr>
+                                    <td>53275532</td>
+                                    <td>Messy</td>
+                                    <td>01300000000</td>
+                                    <td>13 Octboer 2020</td>
+                                    <td><label class="badge badge-info">In progress</label></td>
+                                </tr>
+                                <tr>
+                                    <td>53275533</td>
+                                    <td>John</td>
+                                    <td>01600000000</td>
+                                    <td>12 Octboer 2020</td>
+                                    <td><label class="badge badge-info">In progress</label></td>
+                                </tr>
+                                <tr>
+                                    <td>53275534</td>
+                                    <td>Peter</td>
+                                    <td>01900000000</td>
+                                    <td>12 Octboer 2020</td>
+                                    <td><label class="badge badge-success">Completed</label></td>
+                                </tr>
+                                <tr>
+                                    <td>53275535</td>
+                                    <td>Dave</td>
+                                    <td>01800000000</td>
+                                    <td>11 Octboer 2020</td>
+                                    <td><label class="badge badge-success">Completed</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h3>All Orders</h3>
-<div class="table-responsive">
-    <table class="table table-striped table-sm">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Item</th>
-                <th>Customer</th>
-                <th>Ordered At</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1,008</td>
-                <td>Stuffed Pizza</td>
-                <td>John Doe</td>
-                <td>4th July 10:00 AM</td>
-                <td>Submitted</td>
-            </tr>
-            <tr>
-                <td>1,007</td>
-                <td>Pan Pizza</td>
-                <td>Janr Doe</td>
-                <td>4th July 09:30 AM</td>
-                <td>Processing</td>
-            </tr>
-            <tr>
-                <td>1,006</td>
-                <td>Sausage & Pepperoni</td>
-                <td>Dave Thomas</td>
-                <td>4th July 09:20 AM</td>
-                <td>Processing</td>
-            </tr>
-            <tr>
-                <td>1,005</td>
-                <td>Veggie Mexicana</td>
-                <td>Michael</td>
-                <td>3rd July 10:00 PM</td>
-                <td>Cancelled</td>
-            </tr>
-            <tr>
-                <td>1,004</td>
-                <td>Pan Pizza</td>
-                <td>Salman Ahmed</td>
-                <td>3rd July 09:00 AM</td>
-                <td>Delivered</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>Pan Pizza</td>
-                <td>Raisul Kabir</td>
-                <td>4th July 09:30 AM</td>
-                <td>Delivered</td>
-            </tr>
-            <tr>
-                <td>1,002</td>
-                <td>Sausage & Pepperoni</td>
-                <td>Dave Thomas</td>
-                <td>2nd July 09:20 AM</td>
-                <td>Delivered</td>
-            </tr>
-            <tr>
-                <td>1,001</td>
-                <td>Veggie Mexicana</td>
-                <td>Michael</td>
-                <td>2nd July 10:00 PM</td>
-                <td>Delivered</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 {% endblock content %}

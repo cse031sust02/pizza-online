@@ -1,88 +1,115 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
     <title>Pizza Online</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'store/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'store/images/favicon.ico' %}" />
 </head>
 
 <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Pizza Online</a>
-        <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
-                {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'manager-logout' %}">Sign out</a>
-                {% else %}
-                    <a class="nav-link" href="{% url 'manager-login' %}">Login</a>
-                {% endif %}
-                
-            </li>
-        </ul>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-
-            {% if user.is_authenticated %}
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="sidebar-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'store-dashboard' %}">
-                                <span data-feather="home"></span>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'store-orders' %}">
-                                <span data-feather="file"></span>
-                                Orders
-                            </a>
-                        </li>
-                    </ul>
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="{% url 'store-dashboard' %}"><img
+                        src="{% static 'store/images/logo.svg' %}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="{% url 'store-dashboard' %}"><img
+                        src="{% static 'store/images/logo-mini.svg' %}" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <div class="search-field d-none d-md-block">
+                    <form class="d-flex align-items-center h-100" action="#">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-transparent">
+                                <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                            </div>
+                            <input type="text" class="form-control bg-transparent border-0" placeholder="Search">
+                        </div>
+                    </form>
                 </div>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">John Doe</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="mdi mdi-cached mr-2 text-success"></i> Profile </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'manager-logout' %}">
+                                <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile">
+                        <a href="#" class="nav-link">
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">John Doe</span>
+                                <span class="text-secondary text-small">Store Manager</span>
+                            </div>
+                            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'store-dashboard' %}">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="mdi mdi-home menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'store-setup' %}">
+                            <span class="menu-title">Manage Restaurant</span>
+                            <i class="mdi mdi-store menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'store-items' %}">
+                            <span class="menu-title">Item Management</span>
+                            <i class="mdi mdi-pizza menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'store-orders' %}">
+                            <span class="menu-title">Orders</span>
+                            <i class="mdi mdi-shopping menu-icon"></i>
+                        </a>
+                    </li>
+                </ul>
             </nav>
-            {% endif %}
-
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <!-- partial -->
+            <div class="main-panel">
                 {% block content %}{% endblock %}
-            </main>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020.
+                            All rights
+                            reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Design by <a
+                                href="https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template">PurpleAdmin</a></span>
+                    </div>
+                </footer>
+            </div>
+            <!-- main-panel ends -->
         </div>
+        <!-- page-body-wrapper ends -->
     </div>
-    <!-- Bootstrap Bundle -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="{% static 'store/js/vendor.bundle.base.js' %}"></script>
 </body>
 
 </html>

@@ -1,12 +1,46 @@
-{% extends "store/base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="POST" class="form-signin">
-    {% csrf_token %}
-    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-    {{ form|crispy }}
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-</form>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Online</title>
+    <link rel="stylesheet" href="{% static 'store/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'store/images/favicon.ico' %}" />
+</head>
 
-{% endblock content %}
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth">
+                <div class="row flex-grow">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left p-5">
+                            <div class="brand-logo">
+                                <img src="{% static 'store/images/logo.svg' %}">
+                            </div>
+                            <h4>New here?</h4>
+                            <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+                            <form method="POST" class="pt-3">
+                                {% csrf_token %}
+                                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                                {{ form|crispy }}
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                                <div class="text-center mt-4 font-weight-light"> Already have an account? <a
+                                        href="{% url 'manager-login' %}" class="text-primary">Login</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+</body>
+
+</html>

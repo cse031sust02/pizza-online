@@ -139,7 +139,11 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-# Login Redirect
-# https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url
+# Login/logout pages
+# https://docs.djangoproject.com/en/3.1/ref/settings
+
+LOGIN_URL = '/login'
 
 LOGIN_REDIRECT_URL = '/store'
+
+LOGOUT_REDIRECT_URL = '/login'
