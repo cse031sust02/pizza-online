@@ -14,7 +14,7 @@ def setup(request):
 
 @login_required
 def items(request):
-    return render(request, 'store/items.html')
+    return render(request, 'store/items/list.html')
 
 
 @login_required

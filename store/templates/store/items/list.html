@@ -1,0 +1,88 @@
+{% extends "store/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                <i class="mdi mdi-pizza menu-icon"></i>
+            </span>Manage Items</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'store-items' %}">Items</a></li>
+                <li class="breadcrumb-item active" aria-current="page">List</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Item List</h4>
+                    <p class="card-description">
+                        <button class="btn btn-small btn-gradient-primary float-right">+ Add Item</button>
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg"
+                                            alt="image" />
+                                    </td>
+                                    <td>Family Treat</td>
+                                    <td>Combo</td>
+                                    <td>Tk. 2550</td>
+                                    <td><a href=""><i class="mdi mdi-table-edit"></i></a> | <a href=""><i class="mdi mdi-delete-forever"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="https://cdn.pixabay.com/photo/2014/04/22/02/56/pizza-329523_960_720.jpg"
+                                            alt="image" />
+                                    </td>
+                                    <td>Fusilli Beef Arabiatta</td>
+                                    <td>Pasta</td>
+                                    <td>Tk. 1050</td>
+                                    <td><a href=""><i class="mdi mdi-table-edit"></i></a> | <a href=""><i class="mdi mdi-delete-forever"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="https://cdn.pixabay.com/photo/2016/02/19/11/30/pizza-1209748_960_720.jpg"
+                                            alt="image" />
+                                    </td>
+                                    <td>Cheese Lovers</td>
+                                    <td>Pan Pizza</td>
+                                    <td>Tk. 850</td>
+                                    <td><a href=""><i class="mdi mdi-table-edit"></i></a> | <a href=""><i class="mdi mdi-delete-forever"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="https://cdn.pixabay.com/photo/2017/09/30/15/10/pizza-2802332_960_720.jpg"
+                                            alt="image" />
+                                    </td>
+                                    <td>Beef Lovers</td>
+                                    <td>Pan Pizza</td>
+                                    <td>Tk. 980</td>
+                                    <td><a href=""><i class="mdi mdi-table-edit"></i></a> | <a href=""><i class="mdi mdi-delete-forever"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -3,25 +3,56 @@
 {% block content %}
 
 <div class="content-wrapper">
-
     <div class="page-header">
         <h3 class="page-title">
             <span class="page-title-icon bg-gradient-primary text-white mr-2">
                 <i class="mdi mdi-store"></i>
-            </span> Restaurant Setup </h3>
+            </span>Manage Restaurant</h3>
         <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-                </li>
-            </ul>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">My Restaurant</li>
+                <li class="breadcrumb-item active" aria-current="page">setup</li>
+            </ol>
         </nav>
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    Here you will setup the Restaurant!
+                    <h4 class="card-title">Restaurant Details</h4>
+                    <p class="card-description"></p>
+                    <form class="forms-sample">
+                        <div class="form-group">
+                            <label for="exampleInputName1">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea1">Address</label>
+                            <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>File upload</label>
+                            <input type="file" name="img[]" class="file-upload-default">
+                            <div class="input-group col-xs-12">
+                                <input type="text" class="form-control file-upload-info" disabled
+                                    placeholder="Upload Image">
+                                <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-gradient-primary"
+                                        type="button">Upload</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail3">Website</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="http://">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail3">Phone</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="01xxxxxxxxx">
+                        </div>
+                        <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
                 </div>
             </div>
         </div>

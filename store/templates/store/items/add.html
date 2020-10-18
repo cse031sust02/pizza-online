@@ -3,25 +3,23 @@
 {% block content %}
 
 <div class="content-wrapper">
-
     <div class="page-header">
         <h3 class="page-title">
             <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                <i class="mdi mdi-pizza"></i>
-            </span> Items </h3>
+                <i class="mdi mdi-pizza menu-icon"></i>
+            </span>Manage Items</h3>
         <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-                </li>
-            </ul>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'store-items' %}">Items</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add</li>
+            </ol>
         </nav>
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    Here you will update the menu for your Restaurant!
+                    Add Item page goes here
                 </div>
             </div>
         </div>
