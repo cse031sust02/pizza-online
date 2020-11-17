@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:13.0
+    container_name: pizza-online-db
+    environment:
+      - POSTGRES_DB=pizza_online
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  server:
+    build: .
+    container_name: pizza-online-app
+    environment:
+      - SECRET_KEY=my-secret-key
+      - DEBUG=True
+      - ALLOWED_HOSTS=[*]
+      - DATABASES_ENGINE=django.db.backends.postgresql
+      - DATABASE_NAME=pizza_online
+      - DATABASES_PASSWORD=postgres
+      - DATABASES_USER=postgres
+      - DATABASES_HOST=db
+      - DATABASES_PORT=5432
+    ports:
+      - "8123:8123"
+    command: python manage.py runserver 0.0.0.0:8123
+    depends_on:
+      - db
+    links:
+      - db
