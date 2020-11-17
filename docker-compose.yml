@@ -13,6 +13,8 @@ services:
   server:
     build: .
     container_name: pizza-online-app
+    volumes:
+      - .:/usr/src/pizza-online
     environment:
       - SECRET_KEY=my-secret-key
       - DEBUG=True
