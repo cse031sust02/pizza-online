@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pizza Online</title>
-    <link rel="stylesheet" href="{% static 'store/css/materialdesignicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'store/images/favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'web/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" />
 </head>
 
 <body>
@@ -17,10 +17,10 @@
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="{% url 'store-dashboard' %}"><img
-                        src="{% static 'store/images/logo.svg' %}" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="{% url 'store-dashboard' %}"><img
-                        src="{% static 'store/images/logo-mini.svg' %}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo" href="{% url 'web-dashboard' %}"><img
+                        src="{% static 'web/images/logo.svg' %}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="{% url 'web-dashboard' %}"><img
+                        src="{% static 'web/images/logo-mini.svg' %}" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
                 <div class="search-field d-none d-md-block">
@@ -45,7 +45,7 @@
                             <a class="dropdown-item" href="#">
                                 <i class="mdi mdi-settings-box mr-2 text-success"></i> Profile </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{% url 'manager-logout' %}">
+                            <a class="dropdown-item" href="{% url 'web-logout' %}">
                                 <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
                         </div>
                     </li>
@@ -61,31 +61,31 @@
                         <a href="#" class="nav-link">
                             <div class="nav-profile-text d-flex flex-column">
                                 <span class="font-weight-bold mb-2">{{ user.username }}</span>
-                                <span class="text-secondary text-small">Store Manager</span>
+                                <span class="text-secondary text-small">Restaurant Owner</span>
                             </div>
                             <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'store-dashboard' %}">
+                        <a class="nav-link" href="{% url 'web-dashboard' %}">
                             <span class="menu-title">Dashboard</span>
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'store-setup' %}">
+                        <a class="nav-link" href="{% url 'web-setup' %}">
                             <span class="menu-title">Manage Restaurant</span>
                             <i class="mdi mdi-store menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'store-items' %}">
+                        <a class="nav-link" href="{% url 'web-items' %}">
                             <span class="menu-title">Item Management</span>
                             <i class="mdi mdi-pizza menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'store-orders' %}">
+                        <a class="nav-link" href="{% url 'web-orders' %}">
                             <span class="menu-title">Orders</span>
                             <i class="mdi mdi-shopping menu-icon"></i>
                         </a>
@@ -109,7 +109,7 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
-    <script src="{% static 'store/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'web/js/vendor.bundle.base.js' %}"></script>
 </body>
 
 </html>

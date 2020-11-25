@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     # My Apps
-    'store.apps.StoreConfig',
-    'store_managers.apps.StoreManagersConfig'
+    'web.apps.WebConfig',
 
 ]
 
@@ -144,6 +143,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = '/login'
 
-LOGIN_REDIRECT_URL = '/store'
+LOGIN_REDIRECT_URL = '/dashboard'
 
 LOGOUT_REDIRECT_URL = '/login'

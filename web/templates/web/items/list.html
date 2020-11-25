@@ -1,4 +1,4 @@
-{% extends "store/base.html" %}
+{% extends "web/base.html" %}
 {% load static %}
 {% block content %}
 
@@ -10,7 +10,7 @@
             </span>Manage Items</h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'store-items' %}">Items</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'web-items' %}">Items</a></li>
                 <li class="breadcrumb-item active" aria-current="page">List</li>
             </ol>
         </nav>

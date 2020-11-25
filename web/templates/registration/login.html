@@ -8,9 +8,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pizza Online</title>
-    <link rel="stylesheet" href="{% static 'store/css/materialdesignicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'store/images/favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'web/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <div class="brand-logo">
-                                <img src="{% static 'store/images/logo.svg' %}">
+                                <img src="{% static 'web/images/logo.svg' %}">
                             </div>
                             <h4>Hello! let's get started</h4>
                             <h6 class="font-weight-light">Sign in to continue.</h6>
@@ -30,7 +30,7 @@
                                 {{ form|crispy }}
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
                                 <div class="text-center mt-4 font-weight-light"> Don't have an account? <a
-                                        href="{% url 'manager-register' %}" class="text-primary">Create</a>
+                                        href="{% url 'web-register' %}" class="text-primary">Create</a>
                             </form>
                         </div>
                     </div>
