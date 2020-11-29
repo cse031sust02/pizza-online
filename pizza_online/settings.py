@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     # My Apps
+    'authentication.apps.AuthenticationConfig',
     'web.apps.WebConfig',
 
 ]
@@ -91,6 +92,11 @@ DATABASES = {
         'PORT': os.getenv("DATABASES_PORT"),
     },
 }
+
+
+# Custom User model
+# https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#substituting-a-custom-user-model
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 
 # Password validation
